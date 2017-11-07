@@ -1,0 +1,339 @@
+/* 
+	GS Classes inc.
+	
+	Example markup  
+*/
+main{
+    max-width: 1920px;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #8e8e8e;
+    -webkit-font-smoothing: antialiased; /* Excellent thing to smooth font a bit */
+}
+
+/* 
+	Special styles that will be used	
+	widely across entire site should be	
+	placed in the beginning of the css file
+*/
+section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 425px){
+    section{
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+h1, h2, h3, h4{
+    font-family: 'Montserrat', sans-serif;
+    color: #131316;
+    font-weight: 400;
+}
+
+h1{
+    font-size: 45px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+h4{
+    font-size: 15px;
+    color: #fff;
+}
+
+h5{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fa5c58;
+}
+
+.btn-success{
+    padding: 22px 85px;
+    background: #fa5c58;
+    border: none;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus,
+.btn-success:focus:active{
+    background: #f34b47;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* 
+    HEADS UP!!
+    We created helper classes that set 20px, 40px and 60px margin-top and margin-bottom
+    This helps keep your markup clean and simple
+
+    You might do the same with paddings: simplyfy them to regular number like 20, 40 etc and then create classes like 
+    .padding-top {
+        padding: xpx;
+    }
+    .padding-top-x2 {
+        padding: x*2px;
+    }
+    etc
+*/
+.margin-top{
+    margin-top: 20px;
+}
+
+.margin-top-x2{
+    margin-top: 40px;
+}
+
+.margin-top-x3{
+    margin-top: 60px;
+}
+
+.margin-bottom{
+    margin-bottom: 20px;
+}
+
+.margin-bottom-x2{
+    margin-bottom: 40px;
+}
+
+.margin-bottom-x3{
+    margin-bottom: 60px;
+}
+
+/* ------- Navbar section ------- */
+.navbar-brand{
+    height: auto;
+}
+.nav>li>a {
+    padding: 5px 10px;
+    margin: 5px;
+}
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+    color: #131316;
+    background-color: transparent;
+    border: 1px solid #fa5c58;
+    padding: 4px 9px;
+}
+
+/* ------- Header section ------- */
+header{
+    background: url(../img/header.jpg) no-repeat 50% 50%;
+    padding-top: 300px;
+    padding-bottom: 300px;
+}
+
+@media screen and (max-width: 425px){
+    header{
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+}
+header h1,
+header h2{
+    color: #ffffff;
+}
+
+/* ------- Services section ------- */
+#services .items .icon{
+    width: 80px;
+    height: 80px;
+    line-height: 95px;
+    border-radius: 50%;
+    background: #121215;
+    margin: 0 auto;
+}
+
+#services .items i{
+    font-size: 30px;
+    color: #fa5c58;
+}
+
+/* ------- Video section ------- */
+#video{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url(../img/video-bg.jpg) no-repeat 50% 50%;
+}
+
+#video .item{
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 50px 30px;
+}
+
+#video .icon{
+    width: 80px;
+    height: 80px;
+    background: #fa5c58;
+    color: #fff;
+    border-radius: 50%;line-height: 80px;
+    font-size: 30px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#video h2, 
+#video p{
+    color: #fff;
+}
+
+/* ------- Portfolio Section ------- */
+#portfolio li > a{
+    border: 1px solid #121215;
+    padding: 7px 15px;
+    color: #131316;
+    text-decoration: none;
+}
+
+#portfolio li.active > a,
+#portfolio li:hover > a{
+    padding: 8px 16px;
+    border: none;
+    background: #fa5c58;
+    color: #ffffff;
+}
+
+#portfolio .items > div{
+    padding: 0;
+}
+
+#portfolio .item{
+    position: relative;
+    cursor: pointer;
+}
+
+#portfolio .item .overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+#portfolio .item .overlay > div{
+    position: relative;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8); 
+    height: 100%;   
+}
+
+#portfolio .item:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+} 
+
+#portfolio .item .overlay > div > div{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* HEADS UP! https://www.w3schools.com/cssref/css3_pr_transform.asp */
+}
+
+/* ------- About section ------- */
+#about .item{
+    position: relative;
+}
+
+#about .item > div{
+    padding: 25px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #fff;
+}
+
+#about .item li{
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+/* ------- Blog section ------- */
+#blog{
+    background: url(../img/blog/bg.jpg) 50% 50%;
+}
+
+#blog .items > div{
+    padding: 0;
+}
+
+#blog .item{
+    padding: 40px;
+}
+
+#blog h2,
+#blog p{
+    color: #ffffff;
+}
+
+#blog h3{
+    font-size: 20px;
+    color: #fb5d59;
+}
+
+#blog a{
+    color: #fb5d59;
+    text-decoration: none;
+}
+
+/* ------- Contact section ------- */
+#contact{
+    padding-bottom: 80px;
+}
+
+#contact .form-control{
+    background: #f3f3f3;
+    border-color: transparent;
+    border-radius: 0;
+    padding: 15px;
+    height: 40px;
+    box-shadow: none;
+}
+
+#contact textarea.form-control{
+    height: 150px;
+}
+
+#contact .has-error .form-control {
+    border: 1px solid #fb5d59;
+    color: #fb5d59;
+}
+
+#contact .has-error .form-control::-webkit-input-placeholder{
+    color: #fb5d59;
+}
+
+/* ------- Footer section ------- */
+footer{
+    padding: 100px 0;
+    background-color: #000000;
+}
+
+footer li > a{
+    font-size: 20px;
+    padding: 0 12px;
+    color: #fff;
+    text-decoration: none;
+}
